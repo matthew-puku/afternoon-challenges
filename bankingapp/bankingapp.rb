@@ -32,10 +32,12 @@ while running
         system "clear"
         puts "Your balance is $#{balance}"
     when "deposit"
-        # bug: accepts any input, deposits $0 if invalid.
         system "clear"
-        puts "How much would you like to deposit?"
-        deposit = gets.chomp.to_i
+        deposit = 0
+        while deposit <= 0
+            puts "How much would you like to deposit? Please enter a positive number."
+            deposit = gets.chomp.to_i
+        end
         balance += deposit
         puts "Deposited $#{deposit}"
         history.push("Deposited $#{deposit}")
@@ -43,10 +45,12 @@ while running
             line.puts balance
         end
     when "withdraw"
-        # bug: accepts any input, withdraws $0 if invalid.
         system "clear"
-        puts "How much would you like to withdraw?"
-        withdrawal = gets.chomp.to_i
+        withdrawal = 0
+        while withdrawal <= 0
+            puts "How much would you like to withdraw? Please enter a positive number."
+            withdrawal = gets.chomp.to_i
+        end
         if withdrawal <= balance
             balance -= withdrawal
             puts "Withdrew $#{withdrawal}"
