@@ -24,7 +24,7 @@ end
 
 while running
     puts Askforinput
-    input = gets.chomp
+    input = gets.chomp.downcase
     case input
     when "exit"
         running = false
