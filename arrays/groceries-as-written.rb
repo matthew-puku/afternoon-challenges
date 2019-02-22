@@ -24,8 +24,6 @@ system("clear")
 # uses .downcase because otherwise CAPITAL LETTERS sort before lowercase.
 grocery_list.sort! { |item1,item2| item1[0].downcase <=> item2[0].downcase}
 
-for shark in sharks
-
 puts "Alright, your list has #{grocery_list.length} items."
 for item in grocery_list
     puts "#{item[1]} #{item[0]}"
