@@ -1,0 +1,1 @@
+[{"username":"brob","password":"1234","balance":20,"history":[{"type":"withdrawal","amount":50},{"type":"deposit","amount":70}]},{"username":"jane","password":"pikachu","balance":40,"history":[{"type":"withdrawal","amount":40},{"type":"deposit","amount":80}]}]
